@@ -1,0 +1,2 @@
+# flask_first_copy_project
+这是我的第一个算是比较完整的flask项目，虽然是抄的，但好歹是手打的
