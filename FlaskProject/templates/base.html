@@ -1,30 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% block head %}
-        {% include 'yhead.html' %}
-    {% endblock %}
-</head>
-<body>
-    <header>
-        {% block header %}
-        {% endblock %}
-    </header>
-    <div>
-        {% block content %}
-            <p>Python大神</p>
-        {% endblock %}
+{% block title %}人生苦短，我用Python！{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">切换导航页面</span>
+    <span class="icon-bar">AAA</span>
+    <span class="icon-bar">BBB</span>
+    <span class="icon-bar">CCC</span>
+    </button>
+    <a class="navbar-brand" href="/">人生苦短，我用Python！</a>
     </div>
+    <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li>
+            <a href="/">主页</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+</div>
+{% endblock %}
 
-    {% for item in items %}
-        <li>{% block loop_item scoped %}{{ item }}{% endblock %}</li>
-    {% endfor %}
-
-    <footer>
-        {% block footer %}
-            <p>Python</p>
-                <p>联系我们：<a href="someone@example.com">xxxx@example.com</a></p>
-        {% endblock %}
-    </footer>
-</body>
-</html>
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
