@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <h1>欢迎来到首页</h1>
+    <form method="gey" action="{{ url_for('login') }}">
+        {{ form.csrf_token }}
+        {{ form.username.label }}<br>{{ form.username }}<br>
+        {{ form.password.label }}<br>{{ form.password }}<br>
+        {{ form.remember_me.label }}<br>{{ form.remember_me }}<br>
+        {{ form.submit }}
+    </form>
+</body>
+</html>
